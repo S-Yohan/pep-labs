@@ -9,12 +9,25 @@
  * NOTE: All of these problems can be solved with one line with boolean operators.
  */
 public class Expressions {
+
+    boolean b;
+    boolean b1;
+    boolean b2;
+    
     /**
      * @param b a true/false value.
      * @return if b is true, return true. if b is false, return false.
      */
+
+     
+
     public boolean returnBoolean(boolean b){
-        return false;
+        while (b == false)
+            return false;
+        
+            return true;     
+        
+        
     }
 
     /**
@@ -23,7 +36,7 @@ public class Expressions {
      * look into boolean operations to do this without using if/else statements.
      */
     public boolean returnNot(boolean b){
-        return false;
+        return !(b);        
     }
 
     /**
@@ -33,7 +46,8 @@ public class Expressions {
      * look into boolean operations to do this without using if/else statements.
      */
     public boolean returnAnd(boolean b1, boolean b2){
-        return false;
+        return (b1 && b2);
+        
     }
 
     /**
@@ -42,8 +56,9 @@ public class Expressions {
      * @return true if either b1 or b1 are true. false if both are false.
      * look into boolean operations to do this without using if/else statements.
      */
-    public boolean returnOr(boolean b1, boolean b2){
-        return false;
+    public boolean returnOr (boolean b1, boolean b2){
+        return (b1|| b2);
+        
     }
 
 
