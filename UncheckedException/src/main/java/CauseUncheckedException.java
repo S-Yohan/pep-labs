@@ -16,7 +16,7 @@ public class CauseUncheckedException {
     public void throwUncheckedException(){
         Object o = new String("I do not care");
         System.out.println((Integer) o);
-        }
+        
    
         
         
