@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class GetMax {
     /**
      * This method should return the max value of arr (the largest int.)
@@ -7,6 +9,14 @@ public class GetMax {
      * @return the largest value in arr.
      */
     public int max(int[] arr){
-        return -1;
+
+        Integer [] BoxedArray = new Integer[arr.length];
+        for(int i = 0; i < BoxedArray.length; i++){
+            BoxedArray[i] = Integer.valueOf(arr[i]);
+        }
+        int maxValue = Collections.max(Arrays.asList(BoxedArray));
+        return maxValue;
+
+        
     }
 }
