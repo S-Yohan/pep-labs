@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class DoesNotContain {
     /**
@@ -13,6 +14,13 @@ public class DoesNotContain {
      * @return true if arr does not contain target. false otherwise.
      */
     public boolean arrayDoesNotContain(int[] arr, int target){
-        return false;
+        Set <Integer> set = new HashSet<Integer>();
+        for(int i: arr){            
+            set.add(i);
+        }
+        if(!set.contains(target)){
+            return true;
+        } else{return false;}
+        
     }
 }
