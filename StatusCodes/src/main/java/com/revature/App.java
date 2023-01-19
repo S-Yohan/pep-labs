@@ -13,8 +13,8 @@ public class App
      * Before this endpoint will return any information to you request, you will need to write that logic in
      * JavalinSingleton.java
      */
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ){
+        
         Javalin app = JavalinSingleton.getInstance();
         
         app.start(9001);

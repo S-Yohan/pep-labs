@@ -1,5 +1,5 @@
-[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.652 s <<< FAILURE! - in com.revature.AppTest
-[ERROR] com.revature.AppTest.shouldAnswerWithTrue  Time elapsed: 3.637 s  <<< FAILURE!
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.642 s <<< FAILURE! - in com.revature.AppTest
+[ERROR] com.revature.AppTest.shouldAnswerWithTrue  Time elapsed: 3.63 s  <<< FAILURE!
 org.junit.ComparisonFailure: expected:<[Hello Worl]d> but was:<[Not Foun]d>
 	at org.junit.Assert.assertEquals(Assert.java:117)
 	at org.junit.Assert.assertEquals(Assert.java:146)
