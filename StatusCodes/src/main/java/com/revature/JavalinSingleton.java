@@ -5,6 +5,7 @@ import io.javalin.Javalin;
 public class JavalinSingleton {
 
     public static Javalin getInstance(){
+        
         Javalin app = Javalin.create();
         
         /**
@@ -12,13 +13,16 @@ public class JavalinSingleton {
          * 
          * Note: Please refer to the "StatusCodes.MD" file for more assistance if needed.
          */
-        app.get("/client-side-err", ctx -> {
+        app.get("/client-side-err", ctx -> {ctx.status(400);
+        });
+        return app;
+        
         
             //write logic here
 
-        });
+        
 
-        return app;
+        
     }
     
 }
