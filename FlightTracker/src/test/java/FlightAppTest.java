@@ -181,7 +181,7 @@ public class FlightAppTest {
     @Test
     public void addFlightTest(){
 //        object represents new flight
-        Flight newFlight = new Flight( "dallas", "morgantown");
+        Flight newFlight = new Flight( 1, "dallas", "morgantown");
         Flight persistedFlight = new Flight(1, "dallas", "morgantown");
         Mockito.when(mockFlightDAO.insertFlight(newFlight)).thenReturn(persistedFlight);
         Flight actualFlight = flightService.addFlight(newFlight);

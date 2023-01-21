@@ -66,7 +66,7 @@ public class FlightDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "SELECT * from flight where flight_id = ?";
+            String sql = "SELECT * from flight where flight_id = ?;";
             
             
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -187,7 +187,7 @@ public class FlightDAO {
         List<Flight> flights = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "SELECT * from flight WHERE departure_city = ? AND arrival_city = ?";
+            String sql = "SELECT * from flight WHERE departure_city = ? AND arrival_city = ?;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write PreparedStatement setString and setInt methods here.

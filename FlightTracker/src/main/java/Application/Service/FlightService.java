@@ -4,7 +4,7 @@ import Application.Model.Flight;
 import Application.DAO.FlightDAO;
 
 import java.util.List;
-import java.util.ArrayList;
+
 
 /**
  * The purpose of a Service class is to contain "business logic" that sits between the web layer (controller) and
@@ -65,11 +65,12 @@ public class FlightService {
      *         user should have some insight if they attempted to edit a nonexistent flight.)
      */
     public Flight updateFlight(int flight_id, Flight flight){
-        if(flightDAO.getFlightById(flight_id)== null){
+        Flight flightFromDb = this.flightDAO.getFlightById(flight_id);
+        if(flightFromDb == null){
             return null;
         } else{
             flightDAO.updateFlight(flight_id, flight);
-            return flight;}
+            return this.flightDAO.getFlightById(flight_id);}
         
 
         
