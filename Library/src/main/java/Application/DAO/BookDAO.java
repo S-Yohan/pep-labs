@@ -32,7 +32,7 @@ public class BookDAO {
         List<Book> books = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "SELECT * from Book;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
@@ -49,7 +49,7 @@ public class BookDAO {
     }
 
     /**
-     * TODO: retrieve an book from the Book table, identified by its id.
+     * TODO: retrieve a book from the Book table, identified by its id.
      * You only need to change the sql String and leverage PreparedStatement's setString and setInt methods.
      * @return a book identified by id.
      */
@@ -57,10 +57,11 @@ public class BookDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "SELECT * from Book WHERE isbn = ?;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setInt method here.
+            preparedStatement.setInt(1, isbn);
 
             ResultSet rs = preparedStatement.executeQuery();
             while(rs.next()){
@@ -77,7 +78,7 @@ public class BookDAO {
     }
 
     /**
-     * TODO: insert an book into the Book table.
+     * TODO: insert a book into the Book table.
      * Unlike some of the other insert problems, the primary key here will be provided by the client as part of the
      * Book object. Given the specific nature of an ISBN as both a numerical organization of books outside of this
      * database, and as a primary key, it would make sense for the client to submit an ISBN when submitting a book.
@@ -87,10 +88,14 @@ public class BookDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
-            String sql = "change me" ;
+            String sql = "INSERT INTO Book (isbn, author_id, name, copies_available) VALUES (?, ?, ?, ?);" ;
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setString and setInt methods here.
+            preparedStatement.setInt(1, book.getIsbn());
+            preparedStatement.setInt(2, book.getAuthor_id());
+            preparedStatement.setInt(4, book.getCopies_available());
+            preparedStatement.setString(3, book.getTitle());
 
             preparedStatement.executeUpdate();
             return book;
@@ -109,7 +114,7 @@ public class BookDAO {
         List<Book> books = new ArrayList<>();
         try {
             //Write SQL logic here
-            String sql = "change me";
+            String sql = "SELECT * from Book WHERE copies_available > 0;";
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
             //write preparedStatement's setInt method here.
