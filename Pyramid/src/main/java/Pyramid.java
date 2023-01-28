@@ -26,21 +26,19 @@ public class Pyramid {
      * @param n the size of the pyramid.
      * @return a string representation of the pyramid.
      */
-    public String returnPyramid(int n){   
-        try {
-            String Pyramid= " ";
-            String newline = "\n";
-            for (int i = 1; i <= n; i++){
-                String str = "*";                
-                Pyramid = str.repeat(i) + newline;
-            }
-            return Pyramid;
+    public String returnPyramid(int n){
+        String Output = " ";
             
-        } catch (Exception e) {
-            
-            return e.getMessage();
-        }
         
+        for(int j = 1; j <= n; j++){
+            String str = "*";
+            String lineout = str.repeat(j) + "\n";
+            Output += lineout;
+            
+        }
+        return Output;        
+            
+               
             
     }
 
