@@ -26,7 +26,24 @@ public class Pyramid {
      * @param n the size of the pyramid.
      * @return a string representation of the pyramid.
      */
-    public String returnPyramid(int n){
-        return "";
-    }
+    public String returnPyramid(int n){   
+        
+        String Pyramid= "";
+        String newline = "\n";
+        if (n == 0){
+            return null;
+        } else{
+            //Consider a recursive function here
+            for (int i = 1; i <= n; i++){
+                String str = "*";
+                String Row = str.repeat(i);
+                Pyramid = Row + newline;
+            }
+            return Pyramid;
+            
+        }
+
+        
+        
+}
 }
