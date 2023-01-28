@@ -53,7 +53,7 @@ public class AuthorService {
         if (authorDAO.insertAuthor(author) == null) {
 
             return null;
-        } else{return author;}
-        
+        } 
+        return author;
     }
 }

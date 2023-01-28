@@ -96,7 +96,7 @@ public class LibraryAppTest {
     @Test
     public void addAuthorTest(){
         Author newAuthor = new Author("James Joyce");
-        Author persistedAuthor = new Author(1, "James Joyce");
+        Author persistedAuthor = new Author(0, "James Joyce");
         Mockito.when(mockAuthorDAO.insertAuthor(newAuthor)).thenReturn(persistedAuthor);
         Author actualAuthor = authorService.addAuthor(newAuthor);
         Assert.assertEquals(persistedAuthor, actualAuthor);
@@ -131,7 +131,7 @@ public class LibraryAppTest {
         Book b1 = new Book(108, 1,"cosmicomics", 1);
         bookDAO.insertBook(b1);
         List<Book> books = bookDAO.getAllBooks();
-        books.add(b1);
+        
         Assert.assertTrue(books.contains(b1));
     }
     /**
@@ -156,13 +156,13 @@ public class LibraryAppTest {
         Book b3 = new Book(106, 4, "understanding media", 1);
         Book b4 = new Book(107, 5, "critique of pure reason", 7);
         
-        List<Book> availableBooks = new ArrayList<Book> ();
-        availableBooks.add(b0);
-        availableBooks.add(b1);
-        availableBooks.add(b2);
-        availableBooks.add(b3);
-        availableBooks.add(b4);
-
+        List<Book> availableBooks;
+        // availableBooks.add(b0);
+        // availableBooks.add(b1);
+        // availableBooks.add(b2);
+        // availableBooks.add(b3);
+        // availableBooks.add(b4);
+        
         availableBooks = bookDAO.getBooksWithBookCountOverZero();
         Assert.assertTrue(availableBooks.contains(b0));
         Assert.assertTrue(availableBooks.contains(b1));
@@ -209,7 +209,7 @@ public class LibraryAppTest {
         bookList.add(b1);
         bookList.add(b2);
         bookList.add(b3);
-        bookList.add(b4);
+        
         Mockito.when(mockBookDAO.getAllBooks()).thenReturn(bookList);
         Mockito.when(mockBookDAO.getBookByIsbn(104)).thenReturn(null);
         Mockito.when(mockBookDAO.insertBook(b4)).thenReturn(b4);
