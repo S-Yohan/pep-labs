@@ -27,23 +27,24 @@ public class Pyramid {
      * @return a string representation of the pyramid.
      */
     public String returnPyramid(int n){   
-        
-        String Pyramid= "";
-        String newline = "\n";
-        if (n == 0){
-            return null;
-        } else{
-            //Consider a recursive function here
+        try {
+            String Pyramid= " ";
+            String newline = "\n";
             for (int i = 1; i <= n; i++){
-                String str = "*";
-                String Row = str.repeat(i);
-                Pyramid = Row + newline;
+                String str = "*";                
+                Pyramid = str.repeat(i) + newline;
             }
             return Pyramid;
             
+        } catch (Exception e) {
+            
+            return e.getMessage();
         }
+        
+            
+    }
 
         
         
 }
-}
+
