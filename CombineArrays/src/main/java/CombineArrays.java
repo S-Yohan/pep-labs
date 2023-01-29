@@ -1,3 +1,5 @@
+import java.util.List;
+import java.util.ArrayList;
 
 public class CombineArrays {
     /**
@@ -8,7 +10,18 @@ public class CombineArrays {
      * @return an array containing the contents of arr1 followed by the contents of arr2.
      */
     public int[] combine(int[] arr1, int[] arr2){
-
-        return null;
+        int [] arr3 = new int [arr1.length + arr2.length];
+        int n = arr1.length;
+    
+               
+        for(int i =  0; i < n ; i++){
+            arr3[i] = arr1[i];
+        }    
+        for(int j = 0; j <arr2.length; j++){
+            arr3[n] = arr2[j];
+            n += 1;
+        }
+        return arr3;              
+                
     }
 }
