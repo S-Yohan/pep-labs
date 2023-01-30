@@ -56,12 +56,25 @@ public class SampleClass {
     public boolean b;
 
     //    implement a custom .equals(SampleClass other){} method here.
+    /**
+     * @param other
+     * @return
+     */
     public Boolean equals(SampleClass other){
-        
+        if(SampleClass.this == other){
+            return true;
+        } else{
+            return false;
+        }
+
 
     }
 
     //    implement a custom .toString(){} method here.
+    public toString(){
+        System.out.println(SampleClass.this);
+    }
+
 
     
 }
