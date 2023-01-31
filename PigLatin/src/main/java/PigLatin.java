@@ -17,6 +17,8 @@ public class PigLatin {
      * @return the pig latin form of in.
      */
     public String returnPigLatin(String in){
-        return "";
+        String str1 = in.substring(0, 1);
+        String str2 = in.substring(1);
+        return str2 + str1 + "ay";
     }
 }
