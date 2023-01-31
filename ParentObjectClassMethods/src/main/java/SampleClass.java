@@ -71,8 +71,9 @@ public class SampleClass {
     }
 
     //    implement a custom .toString(){} method here.
-    public toString(){
-        System.out.println(SampleClass.this);
+    public String toString(){
+        return SampleClass.this;
+        
     }
 
 
