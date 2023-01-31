@@ -61,7 +61,7 @@ public class SampleClass {
      * @return
      */
     public Boolean equals(SampleClass other){
-        if(SampleClass.this == other){
+        if((this.a == other.a) && (this.b == other.b)){
             return true;
         } else{
             return false;
@@ -71,8 +71,11 @@ public class SampleClass {
     }
 
     //    implement a custom .toString(){} method here.
+    
     public String toString(){
-        return SampleClass.this;
+        String str1 = String.valueOf(this.a);
+        String str2 = String.valueOf(this.b);
+        return str1 + "," + str2;
         
     }
 
