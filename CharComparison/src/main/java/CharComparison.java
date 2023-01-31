@@ -17,12 +17,10 @@ public class CharComparison {
         
         if (Arrays.equals(a,b)){
             return Outcome;
-        } 
-        for(int i = 0; i< b.length; i++){
-            if (a[i] < b[i]){
-                Outcome = -1;
-            } Outcome = 1;
+        } else{
+            
         }
+        
         return Outcome;
 
             

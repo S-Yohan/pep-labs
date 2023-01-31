@@ -4,8 +4,8 @@
 -------------------------------------------------------
 Picked up JAVA_TOOL_OPTIONS:  -Xmx3489m
 Running CharComparisonTest
-Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.369 sec <<< FAILURE!
-charCompareTest1(CharComparisonTest)  Time elapsed: 0.066 sec  <<< FAILURE!
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.104 sec <<< FAILURE!
+charCompareTest1(CharComparisonTest)  Time elapsed: 0.008 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<-1> but was:<1>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
