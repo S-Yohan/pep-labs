@@ -15,6 +15,10 @@ public class Fibonacci {
      * @return the nth number of fibonacci sequence.
      */
     public int fib(int n){
+        /*The Fibonacci sequence my be represented as F(n) = F(n-1)+F(n-2)
+        F(n) may also be represented as F(n-1) - F(n-2)*/
+        int NthNumber = 0;
+        for(int i = 0; i<= n)
         return 0;
     }
 }
