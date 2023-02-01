@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -17,14 +18,19 @@ public class InsertPosition {
      * @return return the index that a number should be inserted into a sorted array.
      */
     public int searchInsert(int[] nums, int target) {
+        int index = 0;
         Arrays.sort(nums);
-        List<Integer> SortedList = new ArrayList<Integer>();
         for(int i = 0; i< nums.length; i++){
-            SortedList.add(Integer.valueOf(nums[i]));
-            
-        } for(Integer x: SortedList){
-            Integer.compare()
-        }
-        return -1;
+            if ((Integer.compare(nums[i], target) < 1) && (Integer.compare(nums[i+1], target) > 1)){
+                
+                index = i;
+                
+                
+
+            }
+
+        }return index;
+        
+        
     }
 }
