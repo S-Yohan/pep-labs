@@ -27,8 +27,8 @@ public class MostCommonCharacter {
             } else{
                 CharCount.put(c, 1);
             }
-        } final Integer MostFrequent = Collections.max(CharCount.values());
-        for(Entry entry : CharCount.entrySet()){
+        } Integer MostFrequent = Collections.max(CharCount.values());
+        for(Map.Entry<Character, Integer> entry : CharCount.entrySet()){
             if(entry.getValue() == MostFrequent){
                 Output = (char) entry.getKey();
             }

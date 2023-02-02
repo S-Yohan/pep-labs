@@ -4,8 +4,8 @@
 -------------------------------------------------------
 Picked up JAVA_TOOL_OPTIONS:  -Xmx3489m
 Running MostCommonCharacterTest
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.111 sec <<< FAILURE!
-mostCommonCharacterTest2(MostCommonCharacterTest)  Time elapsed: 0.007 sec  <<< FAILURE!
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec <<< FAILURE!
+mostCommonCharacterTest2(MostCommonCharacterTest)  Time elapsed: 0.004 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<52> but was:<54>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
