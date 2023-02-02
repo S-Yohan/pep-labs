@@ -4,8 +4,8 @@
 -------------------------------------------------------
 Picked up JAVA_TOOL_OPTIONS:  -Xmx3489m
 Running StringReverseTest
-Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.045 sec <<< FAILURE!
-StringReverseTest1(StringReverseTest)  Time elapsed: 0.008 sec  <<< FAILURE!
+Tests run: 5, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.098 sec <<< FAILURE!
+StringReverseTest1(StringReverseTest)  Time elapsed: 0.053 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<cba> but was:<null>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)
@@ -165,7 +165,7 @@ java.lang.AssertionError: expected:<> but was:<null>
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-StringReverseTest5(StringReverseTest)  Time elapsed: 0 sec  <<< FAILURE!
+StringReverseTest5(StringReverseTest)  Time elapsed: 0.001 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<wollip> but was:<null>
 	at org.junit.Assert.fail(Assert.java:89)
 	at org.junit.Assert.failNotEquals(Assert.java:835)

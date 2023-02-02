@@ -14,7 +14,7 @@ public class Palindrome {
     public boolean pal(String str){
         StringBuilder Str1 = new StringBuilder(str);
         String ReversedStr = new String(Str1.reverse());
-        if(str == ReversedStr){
+        if(str.equals(ReversedStr)){
             return true;
         }        
         return false;
