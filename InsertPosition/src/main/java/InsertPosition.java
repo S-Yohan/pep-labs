@@ -30,22 +30,20 @@ public class InsertPosition {
         for(int i = 0; i< nums.length; i++){
             newArray.add(nums[i]);
         }
-        // int newlength = nums.length + nums.length;
-        // int newArray [] = new int [newlength];
-        // System.arraycopy(nums, 0, newArray, 0, nums.length-1);
+    
 
        // The return object, index, is initialized here to 0;
         int index = 0;
 
-        // In this for loop the index of that element to be replaced is returned from the
-        // newArray once the conditions are met in the if statement.
+        // In this for loop the index of the element to be replaced is returned from the
+        // newArray list once the conditions are met in the if statement.
 
-        for(int j = 0; j < nums.length; j++){
+        for(int j = 0; j < newArray.size() ; j++){
             
             if((newArray.get(j) < target) && (newArray.get(j+1)) > target){
                 newArray.set(j+1, target);
-                index = j+1;
-            }
+                return index = j+1;
+            } 
         }
 
         return index;

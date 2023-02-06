@@ -4,15 +4,15 @@
 -------------------------------------------------------
 Picked up JAVA_TOOL_OPTIONS:  -Xmx3489m
 Running InsertPositionTest
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.063 sec <<< FAILURE!
-testSearchInsert3(InsertPositionTest)  Time elapsed: 0.003 sec  <<< ERROR!
+Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.055 sec <<< FAILURE!
+testSearchInsert3(InsertPositionTest)  Time elapsed: 0.005 sec  <<< ERROR!
 java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
 	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
 	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
 	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
 	at java.base/java.util.Objects.checkIndex(Objects.java:372)
 	at java.base/java.util.ArrayList.get(ArrayList.java:459)
-	at InsertPosition.searchInsert(InsertPosition.java:45)
+	at InsertPosition.searchInsert(InsertPosition.java:43)
 	at InsertPositionTest.testSearchInsert3(InsertPositionTest.java:36)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
