@@ -30,11 +30,14 @@ public class MostCommonCharacter {
             } else {
                 CharCount.put(c, 1);
             }
-        }
+        }//Finds the maximum value
         Integer MostFrequent = Collections.max(CharCount.values());
+
+        //Iterate through each entry to find the key that corresponds to the maximum value
         for (final Entry entry : CharCount.entrySet()) {
             if (entry.getValue() == MostFrequent) {
                 Output = (char) entry.getKey();
+                return Output;
             }
         }
 
