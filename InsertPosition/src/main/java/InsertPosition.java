@@ -25,7 +25,7 @@ public class InsertPosition {
 
         // The sorted array will be entered into a larger array to avoid any out of
         // bound errors.
-        List<Integer> newArray = new ArrayList<>();
+        ArrayList<Integer> newArray = new ArrayList<>();
 
         for(int i = 0; i< nums.length; i++){
             newArray.add(nums[i]);
@@ -40,9 +40,15 @@ public class InsertPosition {
 
         for(int j = 0; j < newArray.size() ; j++){
             
+            if((newArray.size()- 1) == j){
+                newArray.size
+            } 
+
+            }
             if((newArray.get(j) < target) && (newArray.get(j+1)) > target){
                 newArray.set(j+1, target);
-                return index = j+1;
+                index = newArray.indexOf(target);
+                return index;
             } 
         }
 
