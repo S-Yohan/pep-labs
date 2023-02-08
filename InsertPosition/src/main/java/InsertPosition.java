@@ -27,32 +27,25 @@ public class InsertPosition {
         // bound errors.
         ArrayList<Integer> newArray = new ArrayList<>();
 
-        for(int i = 0; i< nums.length; i++){
+        for (int i = 0; i < nums.length; i++) {
             newArray.add(nums[i]);
         }
-    
 
-       // The return object, index, is initialized here to 0;
+        // The return object, index, is initialized here to 0;
         int index = 0;
 
         // In this for loop the index of the element to be replaced is returned from the
         // newArray list once the conditions are met in the if statement.
 
-        for(int j = 0; j < newArray.size() ; j++){
-            
-            if((newArray.size()- 1) == j){
-                newArray.size
-            } 
-
-            }
-            if((newArray.get(j) < target) && (newArray.get(j+1)) > target){
-                newArray.set(j+1, target);
-                index = newArray.indexOf(target);
-                return index;
-            } 
+        for (int j = 0; j < newArray.size(); j++){
+            if ((j == newArray.size() - 1) && (target > newArray.get(j))) {
+                return j;
+            } if((j < newArray.size()-1) && (newArray.get(j) < target) && (newArray.get(j+1)> target)){
+                return j+1;
+            }       
         }
-
         return index;
+    
 
     }
 }

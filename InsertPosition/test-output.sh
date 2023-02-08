@@ -4,15 +4,13 @@
 -------------------------------------------------------
 Picked up JAVA_TOOL_OPTIONS:  -Xmx3489m
 Running InsertPositionTest
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.055 sec <<< FAILURE!
-testSearchInsert3(InsertPositionTest)  Time elapsed: 0.005 sec  <<< ERROR!
-java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
-	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
-	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
-	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
-	at java.base/java.util.Objects.checkIndex(Objects.java:372)
-	at java.base/java.util.ArrayList.get(ArrayList.java:459)
-	at InsertPosition.searchInsert(InsertPosition.java:43)
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.119 sec <<< FAILURE!
+testSearchInsert3(InsertPositionTest)  Time elapsed: 0.004 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<4> but was:<3>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at org.junit.Assert.assertEquals(Assert.java:633)
 	at InsertPositionTest.testSearchInsert3(InsertPositionTest.java:36)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -50,10 +48,9 @@ java.lang.IndexOutOfBoundsException: Index 4 out of bounds for length 4
 
 Results :
 
-Tests in error: 
-  testSearchInsert3(InsertPositionTest): Index 4 out of bounds for length 4
+Failed tests:   testSearchInsert3(InsertPositionTest): expected:<4> but was:<3>
 
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0
 
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project PEPLabsChallenges: There are test failures.
 [ERROR] 
