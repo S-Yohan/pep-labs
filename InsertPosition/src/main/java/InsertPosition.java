@@ -19,33 +19,13 @@ public class InsertPosition {
      *         array.
      */
     public int searchInsert(int[] nums, int target) {
-
-        // This command sorts nums.
-        Arrays.sort(nums);
-
-        // The sorted array will be entered into a larger array to avoid any out of
-        // bound errors.
-        ArrayList<Integer> newArray = new ArrayList<>();
-
-        for (int i = 0; i < nums.length; i++) {
-            newArray.add(nums[i]);
-        }
-
-        // The return object, index, is initialized here to 0;
         int index = 0;
-
-        // In this for loop the index of the element to be replaced is returned from the
-        // newArray list once the conditions are met in the if statement.
-
-        for (int j = 0; j < newArray.size(); j++){
-            if ((j == newArray.size() - 1) && (target > newArray.get(j))) {
-                return j;
-            } if((j < newArray.size()-1) && (newArray.get(j) < target) && (newArray.get(j+1)> target)){
-                return j+1;
-            }       
-        }
-        return index;
+        for( int i = 0; i < nums.length; i++){
+            if(nums[i] < target){
+                index = i+1;
+            }
+        } return index;   
+        
     
-
     }
 }
