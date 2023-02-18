@@ -14,14 +14,17 @@ import Application.Model.Book;
 import Application.Service.AuthorService;
 import Application.Service.BookService;
 
+@RunWith(MockitoJunitRunner.class)
 public class LibraryAppTest {
     public AuthorDAO authorDAO;
     public AuthorService authorService;
     public AuthorDAO mockAuthorDAO;
     public BookDAO bookDAO;
     public BookService bookService;
+    @Mock
     public BookDAO mockBookDAO;
 
+    
     /**
      * Before every test, reset the database and re-instantiate a new AuthorDAO.
      */
